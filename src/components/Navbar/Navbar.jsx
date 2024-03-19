@@ -8,7 +8,7 @@ import './Navbar.css'
 
 const Navbar = () => {
 
-  var User=1123;
+  var User=null;
   return (
     <nav>
         <div className='navbar'>
@@ -26,8 +26,12 @@ const Navbar = () => {
              {User === null?
                 <Link to='/Auth' className='nav-items nav-links'>Log In</Link> :
                 <>
-                  <Link to='/'><Avatar>M</Avatar></Link>
-                  <button className="nav-item nav-links">Log Out</button>
+                  <Avatar backgroundColor="#009dff"
+                px="10px"
+                py="7px"
+                borderRadius="50%"
+                color="white"> <Link to='/User'  style={{ color: "white", textDecoration: "none" }}> M </Link></Avatar> 
+                  <button className="nav-item nav-links"> Log Out </button>
                 </>
              }
         </div>
